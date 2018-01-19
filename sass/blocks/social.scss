@@ -1,0 +1,14 @@
+.social {
+  margin-top: 50px;
+}
+
+.social__list {
+  @include list-style-none;
+
+  display: flex;
+  justify-content: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 15px;
+}
