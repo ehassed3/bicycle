@@ -1,0 +1,38 @@
+.about-us {
+  padding-top: 105px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: $block-bg-color;
+}
+
+.about-us__title {
+  position: relative;
+
+  display: flex;
+  width: 280px;
+  margin: auto;
+
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: $text-color-titles;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 110px;
+
+    width: 52px;
+    height: 43px;
+
+    background-image: url("../img/generation-icon.png");
+  }
+}
+
+.about-us__text {
+  text-align: center;
+}

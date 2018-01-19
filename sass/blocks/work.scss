@@ -1,0 +1,116 @@
+.work__list {
+  @include list-style-none;
+}
+
+.work__preview {
+  height: 600px;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &--vintage {
+    background-image: url("../img/oliva-logo.png"), url("../img/oliva-bg-general.jpg");
+  }
+
+  &--boriosa {
+    background-image: url("../img/boriosa-logo.png"), url("../img/boriosa-bg-general.jpg");
+  }
+
+  &--retro {
+    background-image: url("../img/retro-logo.png"), url("../img/retro-bg-general.jpg");
+  }
+}
+
+.work__description-container {
+  padding-top: 90px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.work__title {
+  position: relative;
+
+  display: flex;
+  margin: auto;
+
+  font-weight: 700;
+  font-size: $font-size-normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: $text-color-titles;
+
+  &--retro {
+    width: 270px;
+  }
+
+  &--boriosa {
+    width: 150px;
+  }
+
+  &--vintage {
+    width: 180px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+  }
+
+  &--vintage::before {
+    left: 70px;
+
+    width: 41px;
+    height: 30px;
+
+    background-image: url("../img/oliva-icon.png");
+  }
+
+  &--boriosa::before {
+    left: 55px;
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/boriosa-icon.png");
+  }
+
+  &--retro::before {
+    left: 120px;
+
+    width: 23px;
+    height: 41px;
+
+    background-image: url("../img/retro-icon.png");
+  }
+}
+
+.work__img {
+  height: 119px;
+  margin-bottom: 50px;
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  &--vintage {
+    background-image: url("../img/oliva-bg-secondary.jpg");
+  }
+
+  &--boriosa {
+    background-image: url("../img/boriosa-bg-secondary.jpg");
+  }
+
+  &--retro {
+    background-image: url("../img/retro-bg-secondary.jpg");
+  }
+}
+
+.work__after-img {
+  height: 600px;
+
+  background-image: url("../img/retro-bg-third.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
