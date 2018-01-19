@@ -1,0 +1,12 @@
+.page {
+  min-width: $mobile-width;
+  max-width: $desktop-width;
+  margin: 0 auto;
+
+  font-family: $main-font;
+  font-size: $font-size-normal;
+  line-height: $line-height-medium;
+  color: $text-color-main;
+
+  background-color: #fff;
+}

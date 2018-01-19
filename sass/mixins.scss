@@ -1,15 +1,13 @@
-@mixin button-general-style() {
-  display: block;
-  border: 0;
-  border-radius: 0;
-  cursor: pointer;
-  text-decoration: none;
-  transition: $slow-transition;
-}
-
 @mixin images-adaptive() {
   width: 100%;
   height: auto;
+}
+
+@mixin list-style-none() {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 @mixin visually-hidden() {

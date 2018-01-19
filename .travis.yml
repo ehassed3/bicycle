@@ -4,4 +4,16 @@ node_js:
   - "8.2"
 
 notifications:
-  email: false
+  email: true
+
+script:
+ - npm test
+ - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $bicycle
+  local_dir: build
+  on:
+    branch: master
