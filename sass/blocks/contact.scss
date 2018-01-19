@@ -1,0 +1,48 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+
+  padding: 110px 0;
+}
+
+.contact__logo {
+  align-self: center;
+}
+
+.contact__join {
+  margin-top: 30px;
+  align-self: center;
+
+  font-weight: 400;
+}
+
+.contact__form {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  margin-top: 30px;
+}
+
+.contact__email {
+  min-width: 100px;
+  max-width: 400px;
+  margin-right: 10px;
+  flex-grow: 1;
+
+  border: 1px solid $checkbox-border-color;
+
+  &[placeholder] {
+    padding-left: 30px;
+
+    opacity: 0.3;
+  }
+}
+
+.contact__button {
+  padding: 20px 40px;
+
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: $turquoise;
+}

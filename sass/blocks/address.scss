@@ -1,0 +1,14 @@
+.address {
+  text-align: center;
+}
+
+.address__name {
+  font-weight: 400;
+}
+
+.address__main {
+  margin: 0;
+
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+}
