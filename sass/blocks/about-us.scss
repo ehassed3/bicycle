@@ -1,29 +1,37 @@
 .about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding-top: 105px;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
 
   background-color: $block-bg-color;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 174px;
+    padding-bottom: 117px;
+  }
 }
 
 .about-us__title {
   position: relative;
 
-  display: flex;
   width: 280px;
-  margin: auto;
 
+  font-size: $font-size-normal;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: $text-color-titles;
 
   &::before {
     content: "";
     position: absolute;
-    top: -60px;
+    top: -72px;
     left: 110px;
 
     width: 52px;
@@ -31,8 +39,23 @@
 
     background-image: url("../img/generation-icon.png");
   }
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+
+    &::before {
+      left: 192px;
+    }
+  }
 }
 
 .about-us__text {
+  margin-top: 4px;
+
   text-align: center;
+  line-height: $line-height-big;
+
+  @media (min-width: $tablet-width) {
+    max-width: 1030px;
+  }
 }

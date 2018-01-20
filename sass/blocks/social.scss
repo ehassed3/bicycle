@@ -1,5 +1,7 @@
 .social {
-  margin-top: 50px;
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+  }
 }
 
 .social__list {

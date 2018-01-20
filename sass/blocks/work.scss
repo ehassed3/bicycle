@@ -2,22 +2,50 @@
   @include list-style-none;
 }
 
+.work__item {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    min-height: 600px;
+
+    &:nth-child(2) .work__description {
+      order: -1;
+    }
+
+    &:last-child .work__preview {
+      width: 33.333%;
+    }
+  }
+}
+
 .work__preview {
-  height: 600px;
+  min-height: 600px;
 
   background-position: center center;
   background-repeat: no-repeat;
 
   &--vintage {
+    background-color: $img-vintage-bg-color;
     background-image: url("../img/oliva-logo.png"), url("../img/oliva-bg-general.jpg");
   }
 
   &--boriosa {
+    background-color: $img-boriosa-bg-color;
     background-image: url("../img/boriosa-logo.png"), url("../img/boriosa-bg-general.jpg");
   }
 
   &--retro {
+    background-color: $img-retro-bg-color;
     background-image: url("../img/retro-logo.png"), url("../img/retro-bg-general.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 66.666%;
+  }
+}
+
+.work__description {
+  @media (min-width: $tablet-width) {
+    width: 33.333%;
   }
 }
 
@@ -26,6 +54,15 @@
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+
+    min-height: 400px;
+    padding-top: 127px;
+    padding-left: 62px;
+    padding-right: 62px;
+  }
 }
 
 .work__title {
@@ -42,7 +79,7 @@
   color: $text-color-titles;
 
   &--retro {
-    width: 270px;
+    max-width: 270px;
   }
 
   &--boriosa {
@@ -78,7 +115,7 @@
   }
 
   &--retro::before {
-    left: 120px;
+    left: calc(50% - 10px);
 
     width: 23px;
     height: 41px;
@@ -87,11 +124,34 @@
   }
 }
 
+.work__text {
+  font-size: $font-size-small;
+  line-height: $line-height-more-medium;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin-top: 8px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(100% + 36px);
+      left: calc(50% - 25px);
+
+      width: 50px;
+      height: 1px;
+
+      background-color: $checkbox-border-color;
+    }
+  }
+}
+
 .work__img {
   height: 119px;
   margin-bottom: 50px;
 
   background-size: 100%;
+  background-position: center center;
   background-repeat: no-repeat;
 
   &--vintage {
@@ -105,12 +165,36 @@
   &--retro {
     background-image: url("../img/retro-bg-secondary.jpg");
   }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    height: 200px;
+    margin-bottom: 0;
+
+    background-size: cover;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: calc(50% - 10px);
+
+      border-top: 10px solid #ffffff;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+    }
+  }
 }
 
 .work__after-img {
-  height: 600px;
+  min-height: 600px;
 
+  background-color: $img-retro-bg-color;
   background-image: url("../img/retro-bg-third.jpg");
   background-position: center center;
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 33.333%;
+  }
 }

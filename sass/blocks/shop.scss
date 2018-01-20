@@ -4,12 +4,33 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .shop__item {
   &--general {
     order: -1;
   }
+
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 33.333%;
+
+    &--general {
+      order: 0;
+    }
+  }
+}
+
+.shop__preview-wrapper {
+  position: relative;
 }
 
 .shop__preview {
@@ -28,8 +49,9 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 150px;
+  margin-top: 143px;
 
+  font-size: $font-size-small;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -54,10 +76,20 @@
 .shop__img {
   object-fit: cover;
 
+  display: block;
+  min-width: 100%;
   width: 100%;
   height: 267px;
 
-  display: block;
+  &--saddle-black,
+  &--saddles,
+  &--bicycle-with-bag,
+  &--bicycle,
+  &--saddle-traveler,
+  &--bag {
+    width: 266.6px; // фикс из-за неодинаковых размеров изображений
+    height: 100%;
+  }
 }
 
 .shop__container-link {
@@ -69,9 +101,10 @@
 
 .shop__link {
   display: inline-block;
-  padding: 20px 40px;
+  padding: 10px 55px;
   margin: auto;
 
+  font-size: $font-size-small;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
