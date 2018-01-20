@@ -34,4 +34,13 @@
   font-size: $font-size-small;
   font-weight: 700;
   color: $text-color-titles;
+
+  &:hover,
+  &:focus {
+    color: lighten($text-color-titles, 50);
+  }
+
+  &:active {
+    color: darken($text-color-titles, 50);
+  }
 }

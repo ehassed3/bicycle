@@ -49,5 +49,16 @@
   text-transform: uppercase;
   color: #ffffff;
 
-  background-color: $turquoise;
+  background-color: $button-bg-color;
+
+  &:hover,
+  &:focus {
+    background-color: darken($button-bg-color, 10);
+    color: darken(#ffffff, 10);
+  }
+
+  &:active {
+    background-color: darken($button-bg-color, 20);
+    color: darken(#ffffff, 20);
+  }
 }
