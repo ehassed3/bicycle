@@ -1,10 +1,17 @@
 .page-header {
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  padding: 34px 0;
 
   background-image: url("../img/header-bg.jpg");
+
+  @media (min-width: $tablet-width) {
+    height: calc(800px - 2 * 34px);
+
+    background-position: center center;
+  }
 }
 
 .page-header__logo {
-  display: flex;
-  justify-content: center;
+  position: absolute;
 }

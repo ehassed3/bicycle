@@ -1,7 +1,13 @@
 .tweets {
+  min-height: 600px;
   position: relative;
 
   background-color: $block-bg-color;
+
+  @media (min-width: $tablet-width) {
+    min-height: auto;
+    height: 469px;
+  }
 }
 
 .tweets__list {
@@ -11,7 +17,7 @@
 .tweets__item {
   display: none;
 
-  padding: 180px 20px;
+  padding: 183px 20px;
 }
 
 .tweets__title {
@@ -26,7 +32,7 @@
     position: absolute;
 
     top: -60px;
-    left: 120px;
+    left: 130px;
 
     width: 32px;
     height: 27px;
@@ -44,6 +50,12 @@
 }
 
 .tweets__text {
+  display: block;
+  margin: 16px auto;
+  max-width: 1040px;
+
+  font-size: $font-size-big;
+  line-height: $line-height-big;
   text-align: center;
 }
 
@@ -85,7 +97,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 430px;
+    top: 530px;
 
     width: 11px;
     height: 11px;
@@ -104,5 +116,11 @@
 
   &--3::before {
     left: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 390px;
+    }
   }
 }

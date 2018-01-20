@@ -1,5 +1,5 @@
 $mobile-width: 320px;
-$tablet-width: 880px;
+$tablet-width: 740px;
 $mobile-width-only: $tablet-width - 1;
 $desktop-width: 1600px;
 $tablet-width-only: $desktop-width - 1;
@@ -10,13 +10,14 @@ $container-padding-desktop: 120px;
 
 $main-font: "Lato", "Arial", sans-serif;
 
-$font-size-small: 13px;
+$font-size-small: 15px;
 $font-size-normal: 18px;
 $font-size-big: 24px;
 
 $line-height-small: 20px;
 $line-height-medium: 24px;
-$line-height-big: 29px;
+$line-height-more-medium: 30px;
+$line-height-big: 34px;
 
 $fast-transition: 110ms ease-in-out;
 $slow-transition: 180ms ease-in-out;
