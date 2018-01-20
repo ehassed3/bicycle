@@ -60,7 +60,7 @@
 }
 
 .tweets__checkbox {
-  display: none;
+  @include visually-hidden;
 
   &--1:checked ~ .tweets__list .tweets__item--1 {
     display: block;

@@ -113,4 +113,15 @@
   color: #ffffff;
 
   border: 1px solid $shop-link-border-color;
+
+  &:hover,
+  &:focus {
+    color: darken(#ffffff, 30);
+    border-color: darken($shop-link-border-color, 30);
+  }
+
+  &:active {
+    color: darken(#ffffff, 50);
+    border-color: darken($shop-link-border-color, 50);
+  }
 }
