@@ -1,5 +1,26 @@
 .page-footer {
   background-color: $block-bg-color;
 
-  padding: 100px 20px;
+  padding: 90px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 90px 0;
+  }
+}
+
+.page-footer__social {
+  margin-top: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
+}
+
+.page-footer__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: calc((614 / 1600) * 100%);
+    margin-left: calc((250 / 1600) * 100%);
+  }
 }

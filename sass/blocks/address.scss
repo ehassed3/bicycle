@@ -1,14 +1,22 @@
 .address {
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+
+    text-align: left;
+  }
 }
 
 .address__name {
-  font-weight: 400;
+  font-size: $font-size-small;
+  font-weight: 700;
+  line-height: $line-height-very-small;
 }
 
 .address__main {
   margin: 0;
 
-  font-size: $font-size-small;
-  line-height: $line-height-small;
+  font-size: $font-size-very-small;
+  line-height: $line-height-very-small;
 }
